@@ -174,7 +174,7 @@ panelEtam <- function()
   data$Winf <- data$aW * data$Linf^data$bW
   data$Wm  <- data$aW * data$Lm^data$bW
   data$etam <- data$Wm/data$Winf
-  data$Phylum <- data$phyl
+  data$Phylum <- ifelse(data$phyl=="t","Teleosts","Elasmobranchs")
   levels(data$Phylum) <- c("Elasmobranchs", "Teleosts")
   
   loglogpanel(xlim=data$Winf, ylim=c(0.01,2),

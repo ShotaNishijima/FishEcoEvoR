@@ -231,7 +231,7 @@ panelSharkRefpoints <- function() {
   
   # Data points from Zhou et al 2011:
   dat <- read.table("Data/Zhou et al (2011) supplementary.csv", 
-                    sep=";", header=TRUE)
+                    sep=";", header=TRUE,fileEncoding = "UTF-8-BOM")
   dat <- dat[1:103,] # extract only elasmobranchs
   
   # Teleosts
